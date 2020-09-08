@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<title>Draw using voice</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  min-height: 25%%;
+}
+
+</style>
+<body>
+
+
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-black">
+    <div class="w3-col s3 w3-center" >
+      <h4>Draw using Voice</h4>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Header with image -->
+
+
+<div class="w3-center w3-grayscale-min"  id="shape">
+  <div class="w3-center" style=""><img id="img" src="{{img}}"></img></div>
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Image shows here</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Command: {{text}}</span>
+  </div>
+</div>
+
+
+
+<!-- Add a background color and large text to the whole page -->
+
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+
+  <div class="w3-content" style="max-width:250px">
+
+    <div id="controls">
+     <button id="recordButton">Record</button>
+     <button id="pauseButton" disabled>Pause</button>
+     <button id="stopButton" disabled>Stop</button>
+    </div>
+    <div id="formats">Format: start recording to see sample rate</div>
+
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE PROJECT</span></h5>
+    <p>The project allows user to draw shapes like a square or circle and to change the color just using voice command</p>
+
+
+  </div>
+</div>
+
+<script type="text/javascript">
+
+
+
+</script>
+
+<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+<script src="{% static "js/app.js" %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+</body>
+</html>
